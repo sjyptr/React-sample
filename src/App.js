@@ -1,5 +1,5 @@
-
 import React from 'react';
+import App1 from './App1';
 
 const handleColor = (x) => {
   let y = 'red';
@@ -27,22 +27,23 @@ function App() {
     setMyColor(color);
   };
   return (
-    <div className='container'>
-      <div className='counter-div'>
+    <div className="container">
+      <div className="counter-div">
         <h1>Counter Application</h1>
         <div
-          className='count'
+          className="count"
           style={{ color: myColor, fontSize: '24px', fontWeight: 'bold' }}
         >
           {count}
         </div>
         <hr />
-        <div className='buttons' onClick={handleClick}>
-          <button className='subtract'>Subtract</button>
-          <button className='reset'>Reset</button>
-          <button className='add'>Add</button>
+        <div className="buttons" onClick={handleClick}>
+          <button className="subtract">Subtract</button>
+          <button className="reset">Reset</button>
+          <button className="add">Add</button>
         </div>
       </div>
+      <App1 />
     </div>
   );
 }
