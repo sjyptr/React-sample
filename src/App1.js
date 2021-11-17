@@ -91,10 +91,17 @@ function App1() {
     age: 34,
     gender: 'Male',
   });
-  console.log(state)
+  const [name, setName] = React.useState('');
+  console.log(state);
   return (
     <div>
       <h1>My App</h1>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <div>name is "{name}"</div>
       <Name state={state} setState={setState} />
       <Age state={state} setState={setState} />
       <Gender state={state} setState={setState} />
